@@ -7,3 +7,5 @@
 /Udemy/Ultimate C# Masterclass/Assignments/Assignment1_Calculator/obj/Debug/net8.0
 /.vs/ProjectEvaluation
 /Udemy/Ultimate C# Masterclass/Assignments/Assignment2_ToDoList/obj/Debug/net8.0
+**/bin/
+**/obj/
