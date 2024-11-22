@@ -1,6 +1,8 @@
 ﻿printKeuzeMenu();
 string userInput = Console.ReadLine().ToUpper();
-List<string> TODOlist = new List<string>();
+
+//List<string> TODOlist = new List<string>();
+var TODOlist = new List<string>();
 
 while (userInput != "E")
 {
@@ -9,7 +11,7 @@ while (userInput != "E")
         case "S":
             if (TODOlist.Count == 0)
             {
-                Console.WriteLine("No TODOs have been added yet.");
+                printTODOlist();
                 break;
             }
             else
@@ -19,49 +21,16 @@ while (userInput != "E")
             }
 
         case "A":
-            do
-            {
-                Console.WriteLine("Enter a TODO description: ");
-                userInput = Console.ReadLine();
-
-                if (userInput == string.Empty)
-                {
-                    Console.WriteLine("The description cannot be empty.");
-                }
-                else if (TODOlist.Contains(userInput))
-                {
-                    Console.WriteLine("The description must be unique.");
-                }
-                else
-                {
-                    TODOlist.Add(userInput);
-                    Console.WriteLine("TODO succesfully added: " + userInput);
-                    break;
-                }
-            } while (true);
+            AddTodo();
             break;
 
         case "R":
-            Console.WriteLine("Select the index of the TODO you want to remove");
-            printTODOlist();
-            bool isValid = int.TryParse(Console.ReadLine(), out int TODOremover);
-
-            if (isValid)
-            {
-                Console.WriteLine("Valid integer: " + TODOremover);
-                string tijdelijkeWaarde = TODOlist[TODOremover - 1];
-                TODOlist.Remove(TODOlist[TODOremover - 1]);
-                Console.WriteLine("TODO removed: " + tijdelijkeWaarde);
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a valid number.");
-            }
+            RemoveTODO();
             break;
 
 
         default:
-            Console.WriteLine("default");
+            Console.WriteLine("Invalid choice");
             break;
     }
     printKeuzeMenu();
@@ -93,4 +62,66 @@ void printTODOlist()
         }
     }
 
+}
+
+void AddTodo()
+{
+    do
+    {
+        Console.WriteLine("Enter a TODO description: ");
+        string description = Console.ReadLine();
+
+        //if (userInput == ""); 
+        if (description == string.Empty)
+        {
+            Console.WriteLine("The description cannot be empty.");
+        }
+        else if (TODOlist.Contains(description))
+        {
+            Console.WriteLine("The description must be unique.");
+        }
+        else
+        {
+            TODOlist.Add(description);
+            Console.WriteLine("TODO succesfully added: " + description);
+            break;
+        }
+    } while (true);
+}
+
+void RemoveTODO()
+{
+    if (TODOlist.Count == 0)
+    {
+        printTODOlist();
+        return;
+    }
+
+    bool validInput = false;
+    while (!validInput)
+    {
+        Console.WriteLine("Select the index of the TODO you want to remove");
+        printTODOlist();
+
+        userInput = Console.ReadLine();
+        bool isValid = int.TryParse(userInput, out int TODOremover);
+
+        if (!isValid)
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number.");
+            continue;
+        }
+
+        if (TODOremover < 1 || TODOremover > TODOlist.Count)
+        {
+            Console.WriteLine($"Invalid input. Please enter a number between 1 and {TODOlist.Count}.");
+            continue;
+        }
+
+        validInput = true;
+        int ToRemove = TODOremover - 1;
+        string tijdelijkeWaarde = TODOlist[ToRemove];
+        TODOlist.RemoveAt(ToRemove);
+        Console.WriteLine("TODO removed: " + tijdelijkeWaarde);
+    }
 }
