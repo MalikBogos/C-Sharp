@@ -53,40 +53,39 @@ void printTODOlist()
     if (TODOlist.Count == 0)
     {
         Console.WriteLine("No TODOs have been added yet.");
+        return;
     }
-    else
+    for (int i = 0; i < TODOlist.Count; i++)
     {
-        for (int i = 0; i < TODOlist.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {TODOlist[i]}");
-        }
+        Console.WriteLine($"{i + 1}. {TODOlist[i]}");
     }
-
 }
 
 void AddTodo()
 {
+    string description;
     do
     {
         Console.WriteLine("Enter a TODO description: ");
-        string description = Console.ReadLine();
+        description = Console.ReadLine();
+    } while (!IsDescriptionValid(description));
+    TODOlist.Add(description);
+}
 
-        //if (userInput == ""); 
-        if (description == string.Empty)
-        {
-            Console.WriteLine("The description cannot be empty.");
-        }
-        else if (TODOlist.Contains(description))
-        {
-            Console.WriteLine("The description must be unique.");
-        }
-        else
-        {
-            TODOlist.Add(description);
-            Console.WriteLine("TODO succesfully added: " + description);
-            break;
-        }
-    } while (true);
+bool IsDescriptionValid(string description)
+{
+    if (description == "")
+    {
+        Console.WriteLine("The description cannot be empty");
+        return false;
+    }
+    else if (TODOlist.Contains(description))
+    {
+        Console.WriteLine("The description must be unique.");
+        return false;
+    }
+    return true;
+
 }
 
 void RemoveTODO()
