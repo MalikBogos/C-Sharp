@@ -13,5 +13,3 @@ while(getal <= 100)
     getal += 1;
 }
 Console.ReadKey();
-
-// addition
