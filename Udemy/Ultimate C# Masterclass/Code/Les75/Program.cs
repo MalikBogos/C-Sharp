@@ -29,7 +29,7 @@ class Rectangle
 
 class ShapesMeasurementsCalculator
 {
-    public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle.Height;  // expression-bodied methods
+    public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle.Height;  // expression-bodied method
 
-    public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;  // expression-bodied methods
+    public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;  // expression-bodied method
 }
