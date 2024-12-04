@@ -6,44 +6,81 @@ Console.WriteLine(hond.Describe());
 Console.WriteLine(ding.Describe());
 Console.ReadKey();
 
-public class Dog
+//public class Dog
+//{
+//    private string _name;
+//    private string _breed;
+//    private int _weight;
+
+//    public Dog(string name, string breed, int weight)
+//    {
+//        _name = name;
+//        _breed = breed;
+//        _weight = weight;
+//    }
+
+//    public Dog(string name, int weight, string breed = "mixed-breed")
+//    {
+//        _name = name;
+//        _breed = breed;
+//        _weight = weight;
+//    }
+
+//    public string Describe()
+//    {
+//        string size;
+//        if (_weight < 5)
+//        {
+//            size = "tiny";
+//        }
+//        else if (_weight >= 5 && _weight < 30)
+//        {
+//            size = "medium";
+//        }
+//        else
+//        {
+//            size = "large";
+//        }
+
+//        return $"This dog is named {_name}, it's a {_breed}, and it weighs {_weight} kilograms, so it's a {size} dog.";
+//    }
+//}
+
+public class Dog // correct version
 {
     private string _name;
     private string _breed;
-    private int _weight; 
+    private int _weight;
 
-    public Dog (string name, string breed, int weight) 
+    public Dog(string name, string breed, int weight)
     {
         _name = name;
         _breed = breed;
         _weight = weight;
-        Describe();
     }
 
-    public Dog (string name, int weight, string breed = "mixed-breed")
+    public Dog(string name, int weight) : this(name, "mixed-breed", weight)
     {
-        _name = name;
-        _breed = breed;
-        _weight = weight;
-        Describe();
     }
 
     public string Describe()
     {
-        string size;
+        return $"This dog is named {_name}, it's a {_breed}, and it weighs {_weight} kilograms, so it's a {DescribeSize()} dog.";
+    }
+
+    private string DescribeSize()
+    {
         if (_weight < 5)
         {
-            size = "tiny";
+            return "tiny";
         }
-        else if (_weight >= 5 || _weight < 30)
+        else if (_weight >= 5 && _weight < 30)
         {
-            size = "medium";
+            return "medium";
         }
         else
         {
-            size = "large";
+            return "large";
         }
-
-        return $"This dog is named {_name}, it's a {_breed} and it weighs {_weight} kilograms, so it's a {size} dog.";
     }
 }
