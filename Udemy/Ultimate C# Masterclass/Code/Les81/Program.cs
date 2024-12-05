@@ -22,7 +22,7 @@ class Rectangle
         _height = GetLengthOrDefault(height, nameof(_height));
     }
 
-    //public int _width;
+    //private int _width;
 
     //public int Width
     //{
