@@ -93,17 +93,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les78", "Udemy\Ultimate C# 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les79", "Udemy\Ultimate C# Masterclass\Code\Les79\Les79.csproj", "{388E1D87-4BB2-4F91-B907-30F23E55F3DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les80", "Udemy\Ultimate C# Masterclass\Code\Les80\Les80.csproj", "{054A40F5-681A-4E14-BEAA-CF7EC745CFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les80", "Udemy\Ultimate C# Masterclass\Code\Les80\Les80.csproj", "{054A40F5-681A-4E14-BEAA-CF7EC745CFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les81", "Udemy\Ultimate C# Masterclass\Code\Les81\Les81.csproj", "{29849A24-0E2C-475B-AC05-7C9C3ABE371B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les81", "Udemy\Ultimate C# Masterclass\Code\Les81\Les81.csproj", "{29849A24-0E2C-475B-AC05-7C9C3ABE371B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les82", "Udemy\Ultimate C# Masterclass\Code\Les82\Les82.csproj", "{17FD2E0D-09C4-472A-B966-BD6E97EA95B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les82", "Udemy\Ultimate C# Masterclass\Code\Les82\Les82.csproj", "{17FD2E0D-09C4-472A-B966-BD6E97EA95B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingExercise18", "Udemy\Ultimate C# Masterclass\Code\CodingExercise18\CodingExercise18.csproj", "{9F4B1271-8E50-4D2B-AC42-7614F02C1236}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingExercise18", "Udemy\Ultimate C# Masterclass\Code\CodingExercise18\CodingExercise18.csproj", "{9F4B1271-8E50-4D2B-AC42-7614F02C1236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les83", "Udemy\Ultimate C# Masterclass\Code\Les83\Les83.csproj", "{DD0074EB-F80C-4254-BE84-2632D1ED7E20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les83", "Udemy\Ultimate C# Masterclass\Code\Les83\Les83.csproj", "{DD0074EB-F80C-4254-BE84-2632D1ED7E20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingExercise19", "Udemy\Ultimate C# Masterclass\Code\CodingExercise19\CodingExercise19.csproj", "{17E75907-6207-47E0-948D-9469399FA262}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingExercise19", "Udemy\Ultimate C# Masterclass\Code\CodingExercise19\CodingExercise19.csproj", "{17E75907-6207-47E0-948D-9469399FA262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les84", "Udemy\Ultimate C# Masterclass\Code\Les84\Les84.csproj", "{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,6 +293,10 @@ Global
 		{17E75907-6207-47E0-948D-9469399FA262}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E75907-6207-47E0-948D-9469399FA262}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E75907-6207-47E0-948D-9469399FA262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -345,6 +351,7 @@ Global
 		{9F4B1271-8E50-4D2B-AC42-7614F02C1236} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{DD0074EB-F80C-4254-BE84-2632D1ED7E20} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{17E75907-6207-47E0-948D-9469399FA262} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
+		{8C333F72-EE65-47A5-8BC5-6EFE12AD20E6} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB741D49-247F-4CB9-B565-40ABAB30B43D}
