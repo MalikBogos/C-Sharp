@@ -15,16 +15,9 @@ public class DailyAccountState
 
     private int _EndOfDayState;
 
-    public int EndOfDayState
-    {
-        get { return InitialState + SumOfOperations; }
-    }
+    public int EndOfDayState => InitialState + SumOfOperations;
 
     private int _report;
 
-    public string Report
-    {
-        get => $"Day: {DateTime.Now.Day}, month: {DateTime.Now.Month}, year: {DateTime.Now.Year}, initial state: {InitialState}, end of day state: {EndOfDayState}";
-    }
-
+    public string Report => $"Day: {DateTime.Now.Day}, month: {DateTime.Now.Month}, year: {DateTime.Now.Year}, initial state: {InitialState}, end of day state: {EndOfDayState}";
 }
