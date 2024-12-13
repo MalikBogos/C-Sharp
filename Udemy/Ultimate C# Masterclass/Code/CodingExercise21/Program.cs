@@ -1,4 +1,6 @@
-﻿public static class StringsTransformator
+﻿using System.Runtime.CompilerServices;
+
+public static class StringsTransformator
 {
     public static string TransformSeperators
     (
@@ -6,6 +8,6 @@
         string originalSeperator, 
         string targetSeperator)
     {
-        return "for now";
+        string result = string.Join(input, originalSeperator, targetSeperator);
     }
 }
