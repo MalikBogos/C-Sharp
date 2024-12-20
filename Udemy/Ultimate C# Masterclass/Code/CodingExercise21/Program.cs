@@ -1,4 +1,15 @@
 ﻿using System.Runtime.CompilerServices;
+class something
+{
+    public static void Main(String[] args)
+    {
+        StringsTransformator.TransformSeperators("dit.is.een.test", ".", "+");
+        Console.ReadKey();
+    }
+
+    
+
+}
 
 public static class StringsTransformator
 {
@@ -8,6 +19,9 @@ public static class StringsTransformator
         string originalSeperator, 
         string targetSeperator)
     {
-        string result = string.Join(input, originalSeperator, targetSeperator);
+        string[] result = input.Split(originalSeperator);
+       
+
+        return result;
     }
 }
