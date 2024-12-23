@@ -1,15 +1,5 @@
-﻿using System.Runtime.CompilerServices;
-class something
-{
-    public static void Main(String[] args)
-    {
-        StringsTransformator.TransformSeperators("dit.is.een.test", ".", "+");
-        Console.ReadKey();
-    }
-
-    
-
-}
+﻿Console.WriteLine(StringsTransformator.TransformSeperators("dit.is.een.test", ".", "+"));
+Console.ReadKey();
 
 public static class StringsTransformator
 {
@@ -19,9 +9,11 @@ public static class StringsTransformator
         string originalSeperator, 
         string targetSeperator)
     {
-        string[] result = input.Split(originalSeperator);
-       
+        var stringPieces = input.Split(originalSeperator);
+        return string.Join(targetSeperator, stringPieces);
 
-        return result;
+        // string inputString = "this,is,some,string";
+        // var result = inputString.Replace(',', '+');
+        // return input.Replace(originalSeperator, targetSeperator);
     }
 }
