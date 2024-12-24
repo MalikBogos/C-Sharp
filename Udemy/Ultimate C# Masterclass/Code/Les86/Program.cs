@@ -41,7 +41,7 @@ class Names
     public void ReadFromTextFile()
     {
         var fileContents = File.ReadAllText(BuildFilePath());
-        var var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
+        var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
         foreach(var name in namesFromFile)
         {
             AddName(name);
