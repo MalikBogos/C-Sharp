@@ -28,6 +28,21 @@ class NamesValidator
         return name.Length >= 2 && name.Length < 25 && char.IsUpper(name[0]) && name.All(char.IsLetter);
     }
 }
+
+class NamesRepository
+{
+    public List<string> ReadFromTextFile(string filePath)
+    {
+        var fileContents = File.ReadAllText(filePath);
+        return fileContents.Split(Environment.NewLine).ToList();
+    }
+
+    public void WriteToTextFile(string filePath, string textToBeSaved)
+    {
+        File.WriteAllText(filePath, textToBeSaved);
+    }
+}
+
 class Names
 {
     private List<string> _names = new List<string>();
@@ -43,20 +58,7 @@ class Names
 
     
 
-    public void ReadFromTextFile()
-    {
-        var fileContents = File.ReadAllText(BuildFilePath());
-        var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
-        foreach (var name in namesFromFile)
-        {
-            AddName(name);
-        }
-    }
-
-    public void WriteToTextFile()
-    {
-        File.WriteAllText(BuildFilePath(), Format());
-    }
+    
 
     public string BuildFilePath()
     {
