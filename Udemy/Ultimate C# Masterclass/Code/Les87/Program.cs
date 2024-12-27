@@ -29,17 +29,18 @@ class NamesValidator
     }
 }
 
-class NamesRepository
+class StringsTextualRepository
 {
-    public List<string> ReadFromTextFile(string filePath)
+    private static readonly string Seperator = Environment.NewLine;
+    public List<string> Read(string filePath)
     {
         var fileContents = File.ReadAllText(filePath);
-        return fileContents.Split(Environment.NewLine).ToList();
+        return fileContents.Split(Seperator).ToList();
     }
 
-    public void WriteToTextFile(string filePath, string textToBeSaved)
+    public void Write(string filePath, List<string> strings)
     {
-        File.WriteAllText(filePath, textToBeSaved);
+        File.WriteAllText(filePath, string.Join(Seperator, strings);
     }
 }
 
