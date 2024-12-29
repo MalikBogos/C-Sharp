@@ -1,9 +1,11 @@
 ﻿var names = new Names();
 var path = names.BuildFilePath();
+var stringsTextualRepository = new StringsTextualRepositoRepository();
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
-    names.ReadFromTextFile();
+    var stringFromFile = stringsTextualRepository.Read(path);
+    names.AddNames(stringsFromFile);
 }
 else
 {
@@ -49,6 +51,14 @@ class Names
     private List<string> _names = new List<string>();
     private readonly NamesValidator _namesValidator = new NamesValidator();
 
+    public void AddNames(List<string> stringsFromFile)
+    {
+        foreach(var name in stringsFromFile)
+        {
+            AddName(name);
+        }
+    }
+
     public void AddName(string name)
     {
         if (new NamesValidator().IsValid(name))
@@ -72,4 +82,6 @@ class Names
     {
         return string.Join(Environment.NewLine, _names);
     }
+
+    
 }
