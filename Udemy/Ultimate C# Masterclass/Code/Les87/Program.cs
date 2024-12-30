@@ -18,7 +18,7 @@ else
     names.AddName("123 definitely not a valid name");
 
     Console.WriteLine("Saving names to a file");
-    names.WriteToTextFile();
+    stringsTextualRepository.Write(path, names.All);
 }
 Console.WriteLine(names.Format);
 Console.ReadKey();
@@ -48,7 +48,7 @@ class StringsTextualRepository
 
 class Names
 {
-    private List<string> _names = new List<string>();
+    public List<string> All { get; } = new List<string>();
     private readonly NamesValidator _namesValidator = new NamesValidator();
 
     public void AddNames(List<string> stringsFromFile)
@@ -63,7 +63,7 @@ class Names
     {
         if (new NamesValidator().IsValid(name))
         {
-            _names.Add(name);
+            All.Add(name);
         }
     }
 
@@ -80,7 +80,7 @@ class Names
 
     public string Format()
     {
-        return string.Join(Environment.NewLine, _names);
+        return string.Join(Environment.NewLine, All);
     }
 
     
