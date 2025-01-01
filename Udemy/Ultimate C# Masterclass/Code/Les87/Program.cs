@@ -1,10 +1,10 @@
 ﻿var names = new Names();
 var path = names.BuildFilePath();
-var stringsTextualRepository = new StringsTextualRepositoRepository();
+var stringsTextualRepository = new StringsTextualRepository();
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
-    var stringFromFile = stringsTextualRepository.Read(path);
+    var stringsFromFile = stringsTextualRepository.Read(path);
     names.AddNames(stringsFromFile);
 }
 else
@@ -20,7 +20,7 @@ else
     Console.WriteLine("Saving names to a file");
     stringsTextualRepository.Write(path, names.All);
 }
-Console.WriteLine(names.Format);
+Console.WriteLine(names.Format());
 Console.ReadKey();
 
 class NamesValidator
@@ -42,7 +42,7 @@ class StringsTextualRepository
 
     public void Write(string filePath, List<string> strings)
     {
-        File.WriteAllText(filePath, string.Join(Seperator, strings);
+        File.WriteAllText(filePath, string.Join(Seperator, strings));
     }
 }
 
@@ -59,6 +59,8 @@ class Names
         }
     }
 
+    
+
     public void AddName(string name)
     {
         if (new NamesValidator().IsValid(name))
@@ -66,10 +68,6 @@ class Names
             All.Add(name);
         }
     }
-
-    
-
-    
 
     public string BuildFilePath()
     {
@@ -82,6 +80,4 @@ class Names
     {
         return string.Join(Environment.NewLine, All);
     }
-
-    
 }
