@@ -20,7 +20,7 @@ else
     Console.WriteLine("Saving names to a file");
     stringsTextualRepository.Write(path, names.All);
 }
-Console.WriteLine(names.Format());
+Console.WriteLine(new NamesFormatter().Format(names.All));
 Console.ReadKey();
 
 class NamesValidator
@@ -56,6 +56,14 @@ class NamesFilePathBuilder
     }
 }
 
+class NamesFormatter
+{
+    public string Format(List<string> names)
+    {
+        return string.Join(Environment.NewLine, names);
+    }
+}
+
 class Names
 {
     public List<string> All { get; } = new List<string>();
@@ -77,12 +85,5 @@ class Names
         {
             All.Add(name);
         }
-    }
-
-    
-
-    public string Format()
-    {
-        return string.Join(Environment.NewLine, All);
     }
 }
