@@ -121,6 +121,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les89", "Udemy\Ultimate C# 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les88", "Udemy\Ultimate C# Masterclass\Code\Les88\Les88.csproj", "{1F91B459-88B4-4C94-9DDE-C5863E65DB5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les90", "Udemy\Ultimate C# Masterclass\Code\Les90\Les90.csproj", "{4383B816-7F8D-4C4B-AFE9-F1F423901100}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -339,6 +341,10 @@ Global
 		{1F91B459-88B4-4C94-9DDE-C5863E65DB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F91B459-88B4-4C94-9DDE-C5863E65DB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F91B459-88B4-4C94-9DDE-C5863E65DB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4383B816-7F8D-4C4B-AFE9-F1F423901100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4383B816-7F8D-4C4B-AFE9-F1F423901100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4383B816-7F8D-4C4B-AFE9-F1F423901100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4383B816-7F8D-4C4B-AFE9-F1F423901100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -401,6 +407,7 @@ Global
 		{4E38610F-5923-42BA-9914-B8AB70AC24D1} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{0E78CBFC-5791-431D-A0C6-55432244ED3D} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{1F91B459-88B4-4C94-9DDE-C5863E65DB5B} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
+		{4383B816-7F8D-4C4B-AFE9-F1F423901100} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB741D49-247F-4CB9-B565-40ABAB30B43D}
