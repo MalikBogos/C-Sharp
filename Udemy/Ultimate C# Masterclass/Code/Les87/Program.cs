@@ -3,7 +3,7 @@ var path = names.BuildFilePath();
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
-    names.ReadFromTextFile();
+    //names.ReadFromTextFile();
 }
 else
 {
@@ -16,7 +16,7 @@ else
     names.AddName("123 definitely not a valid name");
 
     Console.WriteLine("Saving names to a file");
-    names.WriteToTextFile();
+    //names.WriteToTextFile();
 }
 Console.WriteLine(names.Format());
 Console.ReadKey();
