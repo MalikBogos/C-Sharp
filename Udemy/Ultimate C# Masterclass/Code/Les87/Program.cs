@@ -1,11 +1,9 @@
 ﻿var names = new Names();
 var path = names.BuildFilePath();
-var stringsTextualRepository = new StringsTextualRepository();
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
-    var stringsFromFile = stringsTextualRepository.Read(path);
-    names.AddNames(stringsFromFile);
+    names.ReadFromTextFile();
 }
 else
 {
@@ -18,7 +16,7 @@ else
     names.AddName("123 definitely not a valid name");
 
     Console.WriteLine("Saving names to a file");
-    stringsTextualRepository.Write(path, names.All);
+    names.WriteToTextFile();
 }
 Console.WriteLine(names.Format());
 Console.ReadKey();
@@ -27,45 +25,37 @@ class NamesValidator
 {
     public bool IsValid(string name)
     {
-        return name.Length >= 2 && name.Length < 25 && char.IsUpper(name[0]) && name.All(char.IsLetter);
+        return name.Length >= 2 &&
+            name.Length < 25 &&
+            char.IsUpper(name[0]) &&
+            name.All(char.IsLetter);
     }
 }
 
 class StringsTextualRepository
 {
     private static readonly string Seperator = Environment.NewLine;
-    public List<string> Read(string filePath)
+    public List<string> ReadFromTextFile (string filepath)
     {
-        var fileContents = File.ReadAllText(filePath);
+        var fileContents = File.ReadAllText(filepath);
         return fileContents.Split(Seperator).ToList();
     }
 
-    public void Write(string filePath, List<string> strings)
+    public void WriteToTextFile(string filepath, List<string> strings)
     {
-        File.WriteAllText(filePath, string.Join(Seperator, strings));
+        File.WriteAllText(filepath, string.Join(Seperator, strings));
     }
 }
 
 class Names
 {
-    public List<string> All { get; } = new List<string>();
+    private List<string> _names = new List<string>();
     private readonly NamesValidator _namesValidator = new NamesValidator();
-
-    public void AddNames(List<string> stringsFromFile)
-    {
-        foreach(var name in stringsFromFile)
-        {
-            AddName(name);
-        }
-    }
-
-    
-
     public void AddName(string name)
     {
-        if (new NamesValidator().IsValid(name))
+        if (_namesValidator.IsValid(name))
         {
-            All.Add(name);
+            _names.Add(name);
         }
     }
 
@@ -78,6 +68,6 @@ class Names
 
     public string Format()
     {
-        return string.Join(Environment.NewLine, All);
+        return string.Join(Environment.NewLine, _names);
     }
 }
