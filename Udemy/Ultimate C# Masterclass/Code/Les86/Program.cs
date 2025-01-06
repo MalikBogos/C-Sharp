@@ -18,7 +18,7 @@ else
     Console.WriteLine("Saving names to a file");
     names.WriteToTextFile();
 }
-Console.WriteLine(names.Format);
+Console.WriteLine(names.Format());
 Console.ReadKey();
 
 class Names
@@ -35,7 +35,10 @@ class Names
 
     private bool IsValidName(string name)
     {
-        return name.Length >= 2 && name.Length <25 && char.IsUpper(name[0]) && name.All(char.IsLetter);
+        return name.Length >= 2 &&
+            name.Length < 25 &&
+            char.IsUpper(name[0]) &&
+            name.All(char.IsLetter);
     }
     
     public void ReadFromTextFile()
