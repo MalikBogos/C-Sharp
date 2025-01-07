@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess
+//namespace Les90;          // syntax used if there is only one namespace in the file
+
+
+namespace Les90.DataAccess
 {
     class StringsTextualRepository
     {

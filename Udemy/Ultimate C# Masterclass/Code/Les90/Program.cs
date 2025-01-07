@@ -1,4 +1,6 @@
-﻿var names = new Names();
+﻿using Les90.DataAccess;
+
+var names = new Names();
 var path = new NamesFilePathBuilder().BuildFilePath();
 var stringsTextualRepository = new StringsTextualRepository();
 if (File.Exists(path))
@@ -22,21 +24,3 @@ else
 }
 Console.WriteLine(new NamesFormatter().Format(names.All));
 Console.ReadKey();
-
-class NamesFilePathBuilder
-{
-    public string BuildFilePath()
-    {
-        // we could imagine this is much more complicated,
-        // for example provided by the user and validated
-        return "names.txt";
-    }
-}
-
-class NamesFormatter
-{
-    public string Format(List<string> names)
-    {
-        return string.Join(Environment.NewLine, names);
-    }
-}
