@@ -3,4 +3,30 @@
 GenerateRandomNumber number = new GenerateRandomNumber();
 number.DisplayNumber();
 GenerateMessage.RolledDie();
+
+Input input = new Input();
+input.ReadInput();
+
 Console.ReadKey();
+
+class Input
+{
+    public void ReadInput()
+    {
+        int.Parse(Console.ReadLine());
+    }  
+}
+
+public class Check
+{
+    bool input()
+    {
+        if (input == number)
+        {
+            GenerateMessage.YouWin();
+        }
+        
+        else if(input ==)
+        return true;
+    }
+}
