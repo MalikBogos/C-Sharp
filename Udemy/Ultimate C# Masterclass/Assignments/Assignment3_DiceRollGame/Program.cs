@@ -19,14 +19,8 @@ class Input
 
 public class Check
 {
-    bool input()
+    void userInput(Input input)
     {
-        if (input == number)
-        {
-            GenerateMessage.YouWin();
-        }
-        
-        else if(input ==)
-        return true;
+        Console.WriteLine("test");
     }
 }
