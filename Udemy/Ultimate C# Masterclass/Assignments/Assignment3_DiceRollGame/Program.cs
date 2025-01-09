@@ -21,6 +21,9 @@ public class Check
 {
     void userInput(Input input)
     {
-        Console.WriteLine("test");
+        if (input < 0)
+        {
+            GenerateMessage.IncorrectInput();
+        }
     }
 }
