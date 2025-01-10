@@ -36,17 +36,27 @@ public class Check
 {
     public void Validation(int input, int randomNumber)
     {
-        if (input == 0)
-        {
-            Console.WriteLine("Input is zero.");
-        } 
-        else if (input == randomNumber)
+        if (input == randomNumber)
         {
             GenerateMessage.YouWin();
+        } 
+        else if (!input.Equals(randomNumber))
+        {
+            GenerateMessage.WrongNumber();
+            Input userInput = new Input();
+
+            while (!input.Equals(randomNumber))
+            {
+                for(int i = 0; i < 3; i++)
+                {
+                    userInput.ReadInput();
+                }
+            }
+
         }
         else
         {
-            Console.WriteLine($"Input is: {input}");
+            GenerateMessage.IncorrectInput();
         }
     }
 }
