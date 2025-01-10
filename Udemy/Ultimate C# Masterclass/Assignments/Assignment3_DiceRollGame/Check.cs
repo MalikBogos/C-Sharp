@@ -9,22 +9,22 @@
         else
         {
             GenerateMessage.WrongNumber();
+            GenerateMessage.EnterNumber();
             Input userInput = new Input();
 
             int attempts = 1;
             while (input != randomNumber && attempts < 3)
             {
-                Console.WriteLine($"Attempt {attempts + 1}:");
                 input = userInput.ReadInput();
                 if (input == randomNumber)
                 {
                     GenerateMessage.YouWin();
                     return;
                 }
-                else
+                else if(attempts < 2)
                 {
                     GenerateMessage.WrongNumber();
-                    
+                    GenerateMessage.EnterNumber();
                 }
                 attempts++;
 

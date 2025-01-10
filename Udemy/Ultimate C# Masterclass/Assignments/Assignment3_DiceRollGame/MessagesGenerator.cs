@@ -8,9 +8,12 @@
     public static void WrongNumber()
     {
         Console.WriteLine("Wrong number");
-        Console.WriteLine("Enter number: ");
     }
 
+    public static void EnterNumber()
+    {
+        Console.WriteLine("Enter number: ");
+    }
     public static void YouWin()
     {
         Console.WriteLine("You win");
