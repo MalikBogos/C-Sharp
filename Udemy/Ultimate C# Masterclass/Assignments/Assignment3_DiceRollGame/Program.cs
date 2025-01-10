@@ -18,12 +18,23 @@ public class Input
 {
     public int ReadInput()
     {
-        string input = Console.ReadLine();
-        if(!int.TryParse(input, out int result))
+        string input;
+        int result;
+
+        // Continuously prompt the user until the input is valid
+        while (true)
         {
-            GenerateMessage.IncorrectInput();
             input = Console.ReadLine();
+            if (int.TryParse(input, out result))
+            {
+                break; // Exit the loop if parsing succeeds
+            }
+            else
+            {
+                GenerateMessage.IncorrectInput();
+            }
         }
+
         return result;
         
     }  
