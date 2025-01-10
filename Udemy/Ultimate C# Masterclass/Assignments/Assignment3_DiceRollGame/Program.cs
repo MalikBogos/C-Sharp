@@ -19,15 +19,12 @@ public class Input
     public int ReadInput()
     {
         string input = Console.ReadLine();
-        if(int.TryParse(input, out int result))
+        if(!int.TryParse(input, out int result))
         {
-            return result;
+            GenerateMessage.IncorrectInput();
+            input = Console.ReadLine();
         }
-        else
-        {
-            Console.WriteLine("Invalid input. Defaulting to 0.");
-            return 0;
-        }
+        return result;
         
     }  
 }
@@ -52,7 +49,6 @@ public class Check
                     userInput.ReadInput();
                 }
             }
-
         }
         else
         {
