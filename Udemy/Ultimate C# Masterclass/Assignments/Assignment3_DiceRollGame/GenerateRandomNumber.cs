@@ -4,7 +4,6 @@
 
     public void DisplayNumber()
     {
-
         Console.WriteLine(Number);
     }
 }
