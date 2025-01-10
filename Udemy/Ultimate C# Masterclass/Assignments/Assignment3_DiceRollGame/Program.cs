@@ -36,23 +36,34 @@ public class Check
         if (input == randomNumber)
         {
             GenerateMessage.YouWin();
-        } 
-        else if (!input.Equals(randomNumber))
+        }
+        else
         {
             GenerateMessage.WrongNumber();
             Input userInput = new Input();
 
-            while (!input.Equals(randomNumber))
+            int attempts = 1;
+            while (input != randomNumber && attempts < 3)
             {
-                for(int i = 0; i < 3; i++)
+                Console.WriteLine($"Attempt {attempts + 1}:");
+                input = userInput.ReadInput();
+                if (input == randomNumber)
                 {
-                    userInput.ReadInput();
+                    GenerateMessage.YouWin();
+                    return;
+                }
+                else
+                {
+                    GenerateMessage.WrongNumber();
+                    
+                }
+                attempts++;
+
+                if (input != randomNumber && attempts == 3)
+                {
+                    GenerateMessage.YouLose();
                 }
             }
-        }
-        else
-        {
-            GenerateMessage.IncorrectInput();
         }
     }
 }
