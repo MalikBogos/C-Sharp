@@ -9,5 +9,4 @@ int userInput = input.ReadInput();
 Check check = new Check();
 check.Validation(userInput, randomNumber);
 
-
 Console.ReadKey();
