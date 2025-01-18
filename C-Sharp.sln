@@ -129,7 +129,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment3_DiceRollGame", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les94", "Udemy\Ultimate C# Masterclass\Code\Les94\Les94.csproj", "{BF4057CA-5707-45DA-AE3B-24B9D4D0BC43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les95", "Udemy\Ultimate C# Masterclass\Code\Les95\Les95.csproj", "{B355CF79-75B9-4B02-8C61-9230274B04D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les95", "Udemy\Ultimate C# Masterclass\Code\Les95\Les95.csproj", "{B355CF79-75B9-4B02-8C61-9230274B04D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les96", "Udemy\Ultimate C# Masterclass\Code\Les96\Les96.csproj", "{03283318-8574-4103-B2E8-AA0560E5FA10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -369,6 +371,10 @@ Global
 		{B355CF79-75B9-4B02-8C61-9230274B04D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B355CF79-75B9-4B02-8C61-9230274B04D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B355CF79-75B9-4B02-8C61-9230274B04D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03283318-8574-4103-B2E8-AA0560E5FA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03283318-8574-4103-B2E8-AA0560E5FA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03283318-8574-4103-B2E8-AA0560E5FA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03283318-8574-4103-B2E8-AA0560E5FA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -436,6 +442,7 @@ Global
 		{A32E36CD-8C30-4DAA-9799-EF177FE25E08} = {D2556EA6-FF70-4D82-AAEC-D108C10F57E6}
 		{BF4057CA-5707-45DA-AE3B-24B9D4D0BC43} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{B355CF79-75B9-4B02-8C61-9230274B04D5} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
+		{03283318-8574-4103-B2E8-AA0560E5FA10} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB741D49-247F-4CB9-B565-40ABAB30B43D}

@@ -32,6 +32,6 @@ class Dice
 
     public int Roll() => _random.Next(1, SidesCount + 1);
 
-    public void Describe() => Console.WriteLine($"This is a dice with {SidesCount} sides"};
+    public void Describe() => Console.WriteLine($"This is a dice with {SidesCount} sides");
 
 }
