@@ -1,4 +1,11 @@
-﻿Console.ReadKey();
+﻿var pizza = new Pizza();
+pizza.AddIngredient(new Cheddar());
+pizza.AddIngredient(new Mozarella());
+pizza.AddIngredient(new TomatoSauce());
+
+Console.WriteLine(pizza.Describe());
+
+Console.ReadKey();
 
 public class Pizza // problem to be solved with polymorphism
 {
@@ -11,19 +18,24 @@ public class Pizza // problem to be solved with polymorphism
         $"This is a pizza with {String.Join(", ", _ingredients)}";
 }
 
-public class Cheddar
+public class Ingredient
+{
+
+}
+
+public class Cheddar : Ingredient
 {
     public string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
 }
 
-public class TomatoSauce
+public class TomatoSauce : Ingredient
 {
     public string Name => "Tomato sauce";
     public int TomatosIn100Grams { get; }
 }
 
-public class Mozarella
+public class Mozarella : Ingredient
 {
     public string Name => "Mozarella";
     public bool IsLight { get; }
