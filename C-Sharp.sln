@@ -137,7 +137,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les101", "Udemy\Ultimate C#
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les102", "Udemy\Ultimate C# Masterclass\Code\Les101\Les102.csproj", "{5F196045-D8D0-41AA-98D0-12D2ED4362BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les103", "Udemy\Ultimate C# Masterclass\Code\Les103\Les103.csproj", "{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Les103", "Udemy\Ultimate C# Masterclass\Code\Les103\Les103.csproj", "{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Les107", "Udemy\Ultimate C# Masterclass\Code\Les107\Les107.csproj", "{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -393,6 +395,10 @@ Global
 		{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -464,6 +470,7 @@ Global
 		{89427120-8E19-43A7-B76A-242F3A0C7292} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{5F196045-D8D0-41AA-98D0-12D2ED4362BE} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 		{EC0C35DA-12F5-4C90-8225-0F1D60CCFE46} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
+		{2F6AEFF7-E87E-410B-8DBF-36E77AEA294C} = {EBFF0DCB-B9DB-453A-913A-A5211630C496}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB741D49-247F-4CB9-B565-40ABAB30B43D}
